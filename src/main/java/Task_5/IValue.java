@@ -1,4 +1,4 @@
-package Task_6;
+package Task_5;
 
 import java.util.ArrayDeque;
 
