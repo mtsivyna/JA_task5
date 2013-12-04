@@ -32,10 +32,8 @@ public class Main {
                         new Variable("x")
                     )
                 ),
-
+//yyyyyyyyyyyyyyyyyyyyy
                 new Const(1)
             ).evaluate ());
     }
-
-
 }
