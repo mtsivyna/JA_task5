@@ -7,18 +7,17 @@ package Task_5;
  * Time: 11:38 AM
  * To change this template use File | Settings | File Templates.
  */
-public class Plus {
+public class Plus extends Operation {
 
-    public static void Plus() {
+        Plus(IValue... operations) {
+            super(operations);
+        }
 
-
-
-    }
-    public int evaluate(int xValue) {
-
-        x.operation(xValue);
-        difference = x.product - aConst.constant;
-        return difference;
-    }
+        @Override
+        public int getValue() {
+            if (arguments.length != 2)
+                throw new IllegalArgumentException();
+            return arguments[0].getValue() + arguments[1].getValue();
+        }
 
 }

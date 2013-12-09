@@ -7,8 +7,22 @@ package Task_5;
  * Time: 11:38 AM
  * To change this template use File | Settings | File Templates.
  */
-public class Division {
 
-    public static void Division() {
+public class Division extends Operation {
+
+    Division(IValue... operations) {
+
+        super(operations);
+    }
+
+    @Override
+    public int getValue() {
+
+        if (arguments.length != 2) {
+
+            throw new IllegalArgumentException();
+        }
+
+        return arguments[0].getValue() / arguments[1].getValue();
     }
 }

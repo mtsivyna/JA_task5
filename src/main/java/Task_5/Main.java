@@ -12,28 +12,12 @@ public class Main {
     public static void main (String[] args) {
 
         System.out.println(
-            new Minus(
-                new Times(
-                    new Const(2),
+            new Plus(
+                new Division(
+                    new Const(24),
                     new Variable("x")
                     ),
-                new Const(4)
-         ).evaluate(12));
-
-        System.out.println(
-            new Plus(
-                new Minus(
-                    new Times(
-                        new Variable("x"),
-                        new Variable("x")
-                    ),
-                    new Times(
-                        new Const(-2),
-                        new Variable("x")
-                    )
-                ),
-//yyyyyyyyyyyyyyyyyyyyy
-                new Const(1)
-            ).evaluate ());
+                new Const(-2)
+         ).evaluate(-2));
     }
 }

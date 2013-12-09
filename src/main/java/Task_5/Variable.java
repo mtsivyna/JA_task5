@@ -1,5 +1,7 @@
 package Task_5;
 
+import java.util.ArrayDeque;
+
 /**
  * Created with IntelliJ IDEA.
  * User: mtsivyna
@@ -7,14 +9,26 @@ package Task_5;
  * Time: 11:38 AM
  * To change this template use File | Settings | File Templates.
  */
-public class Variable{
+public class Variable implements IValue{
 
+    String name;
+    private int value;
 
-    int x;
-    public Variable(String x) {
+    Variable(String name) {
+
+        this.name = name;
     }
-    public int operation (int x) {
-        this.x = x;
-        return x;
+
+    @Override
+    public int getValue() {
+
+        return value;
+    }
+
+    @Override
+    public void initialize(ArrayDeque<Integer> variableValues) {
+
+        this.value = variableValues.pop();
+
     }
 }

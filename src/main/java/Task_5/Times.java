@@ -7,23 +7,18 @@ package Task_5;
  * Time: 11:38 AM
  * To change this template use File | Settings | File Templates.
  */
-public class Times {
+public class Times extends Operation{
 
-    int product;
-    Variable var1;
-    Variable var2;
-
-    public Times(Variable var1, Variable var2) {
-
-        this.var1 = var1;
-        this.var2 = var2;
+    public Times(IValue... operations) {
+        super(operations);
     }
-
-    public int operation (int val) {
-        var.operation(val);
-        product = aConst.constant * var.x;
-
-        System.out.println(var.x);
-        return product;
+    @Override
+    public int getValue() {
+        if (arguments.length == 0)
+            throw new IllegalArgumentException();
+        int result = arguments[0].getValue();
+        for (int i=1; i<arguments.length; i++)
+            result *= arguments[i].getValue();
+        return result;
     }
 }

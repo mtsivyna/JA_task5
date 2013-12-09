@@ -7,22 +7,15 @@ package Task_5;
  * Time: 11:38 AM
  * To change this template use File | Settings | File Templates.
  */
-public class Minus {
+public class Minus extends Operation {
 
-    int difference;
-    Times x;
-    Const aConst;
-
-    public Minus(Times x, Const aConst) {
-
-        this.x = x;
-        this.aConst = aConst;
+    Minus(IValue... operations) {
+        super(operations);
     }
-
-    public int evaluate(int xValue) {
-
-        x.operation(xValue);
-        difference = x.product - aConst.constant;
-        return difference;
+    @Override
+    public int getValue() {
+        if (arguments.length != 2)
+            throw new IllegalArgumentException();
+        return arguments[0].getValue() - arguments[1].getValue();
     }
 }

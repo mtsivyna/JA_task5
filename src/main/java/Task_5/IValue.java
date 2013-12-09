@@ -13,5 +13,4 @@ public interface IValue {
 
     int getValue();
     public void initialize(ArrayDeque<Integer> variableValues);
-
 }
