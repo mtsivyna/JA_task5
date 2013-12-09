@@ -9,7 +9,7 @@ package Task_5;
  */
 public class Times extends Operation{
 
-    public Times(IValue... operations) {
+    public Times(Value... operations) {
         super(operations);
     }
     @Override

@@ -9,7 +9,7 @@ import java.util.ArrayDeque;
  * Time: 12:48 PM
  * To change this template use File | Settings | File Templates.
  */
-public interface IValue {
+public interface Value {
 
     int getValue();
     public void initialize(ArrayDeque<Integer> variableValues);

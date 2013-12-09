@@ -10,7 +10,7 @@ package Task_5;
 
 public class Division extends Operation {
 
-    Division(IValue... operations) {
+    Division(Value... operations) {
 
         super(operations);
     }

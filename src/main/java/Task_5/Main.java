@@ -18,6 +18,6 @@ public class Main {
                     new Variable("x")
                     ),
                 new Const(-2)
-         ).evaluate(-2));
+         ).evaluate(2));
     }
 }

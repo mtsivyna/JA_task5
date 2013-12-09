@@ -9,7 +9,7 @@ package Task_5;
  */
 public class Plus extends Operation {
 
-        Plus(IValue... operations) {
+        Plus(Value... operations) {
             super(operations);
         }
 

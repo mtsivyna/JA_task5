@@ -9,7 +9,7 @@ import java.util.ArrayDeque;
  * Time: 11:38 AM
  * To change this template use File | Settings | File Templates.
  */
-public class Variable implements IValue{
+public class Variable implements Value {
 
     String name;
     private int value;

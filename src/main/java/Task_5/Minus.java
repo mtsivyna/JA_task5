@@ -9,7 +9,7 @@ package Task_5;
  */
 public class Minus extends Operation {
 
-    Minus(IValue... operations) {
+    Minus(Value... operations) {
         super(operations);
     }
     @Override

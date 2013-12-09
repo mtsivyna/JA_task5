@@ -9,7 +9,7 @@ import java.util.ArrayDeque;
  * Time: 11:36 AM
  * To change this template use File | Settings | File Templates.
  */
-public class Const implements IValue{
+public class Const implements Value {
 
     private final int value;
     Const(int value) {

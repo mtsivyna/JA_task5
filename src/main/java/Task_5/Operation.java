@@ -9,11 +9,11 @@ import java.util.ArrayDeque;
  * Time: 12:15 PM
  * To change this template use File | Settings | File Templates.
  */
-public abstract class Operation implements IValue {
+public abstract class Operation implements Value {
 
-    protected final IValue[] arguments;
+    protected final Value[] arguments;
 
-    public Operation(IValue... operations) {
+    public Operation(Value... operations) {
 
         this.arguments = operations;
     }
@@ -34,7 +34,7 @@ public abstract class Operation implements IValue {
     @Override
     public final void initialize(ArrayDeque<Integer> variableValues) {
 
-        for (IValue value : arguments) {
+        for (Value value : arguments) {
 
             value.initialize(variableValues);
         }
