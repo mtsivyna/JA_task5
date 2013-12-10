@@ -13,21 +13,24 @@ public abstract class Operation implements Value {
 
     protected final Value[] arguments;
 
+    // Current operations
     public Operation(Value... operations) {
 
         this.arguments = operations;
+        System.out.println("val"+arguments[1]);
     }
 
-    public final int evaluate (int... params) {
+    public final int evaluate (int... paramVal) {
 
-        ArrayDeque<Integer> values = new ArrayDeque<Integer>(params.length);
+        // Creating queue of parameters
+        ArrayDeque<Integer> valuesQueue = new ArrayDeque<Integer>(paramVal.length);
 
-        for (int i : params) {
+        for (int i : paramVal) {
 
-            values.add(i);
+            valuesQueue.add(i);
         }
-
-        initialize(values);
+        System.out.println(valuesQueue);
+        initialize(valuesQueue);
         return getValue();
     }
 
@@ -37,6 +40,7 @@ public abstract class Operation implements Value {
         for (Value value : arguments) {
 
             value.initialize(variableValues);
+            System.out.println("val"+value);
         }
     }
 }

@@ -12,12 +12,9 @@ public class Main {
     public static void main (String[] args) {
 
         System.out.println(
-            new Plus(
                 new Division(
                     new Const(24),
                     new Variable("x")
-                    ),
-                new Const(-2)
-         ).evaluate(2));
+                    ).evaluate(5, 2));
     }
 }

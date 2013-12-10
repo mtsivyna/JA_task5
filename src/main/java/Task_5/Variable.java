@@ -17,11 +17,12 @@ public class Variable implements Value {
     Variable(String name) {
 
         this.name = name;
+        System.out.println("Variable 1 " + name);
     }
 
     @Override
     public int getValue() {
-
+        System.out.println("Variable 2 " + value);
         return value;
     }
 
@@ -29,6 +30,7 @@ public class Variable implements Value {
     public void initialize(ArrayDeque<Integer> variableValues) {
 
         this.value = variableValues.pop();
+        System.out.println("Variable 3 " + value);
 
     }
 }
