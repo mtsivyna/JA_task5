@@ -10,12 +10,20 @@ package Task_5;
 public class Minus extends Operation {
 
     Minus(Value... operations) {
+
         super(operations);
     }
+
     @Override
     public int getValue() {
-        if (arguments.length != 2)
-            throw new IllegalArgumentException();
-        return arguments[0].getValue() - arguments[1].getValue();
+
+        int result = arguments[0].getValue();
+
+        for (int i = 1; i < arguments.length; i++) {
+
+            result -= arguments[i].getValue();
+        }
+
+        return result;
     }
 }

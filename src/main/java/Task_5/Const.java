@@ -11,21 +11,20 @@ import java.util.ArrayDeque;
  */
 public class Const implements Value {
 
-    private final int value;
+    private final int value;    // Constant value
     Const(int value) {
-        System.out.println("const 1 " + value);
-        this.value = value;
+
+        this.value = value;     // Init constant
     }
 
     @Override
     public int getValue() {
-        System.out.println("const 2 " + value);
+
         return value;
     }
 
     @Override
     public void initialize(ArrayDeque<Integer> variableValues) {
-        System.out.println("valasdasd");
         //To change body of implemented methods use File | Settings | File Templates.
     }
 

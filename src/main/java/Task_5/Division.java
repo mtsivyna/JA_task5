@@ -7,7 +7,6 @@ package Task_5;
  * Time: 11:38 AM
  * To change this template use File | Settings | File Templates.
  */
-
 public class Division extends Operation {
 
     Division(Value... operations) {
@@ -18,11 +17,13 @@ public class Division extends Operation {
     @Override
     public int getValue() {
 
-        if (arguments.length != 2) {
+        int result = arguments[0].getValue();
 
-            throw new IllegalArgumentException();
+        for (int i = 1; i < arguments.length; i++) {
+
+            result /= arguments[i].getValue();
         }
 
-        return arguments[0].getValue() / arguments[1].getValue();
+        return result;
     }
 }

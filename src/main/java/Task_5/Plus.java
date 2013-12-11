@@ -9,15 +9,21 @@ package Task_5;
  */
 public class Plus extends Operation {
 
-        Plus(Value... operations) {
-            super(operations);
+    Plus(Value... operations) {
+
+        super(operations);
+    }
+
+    @Override
+    public int getValue() {
+
+        int result = arguments[0].getValue();
+
+        for (int i = 1; i < arguments.length; i++) {
+
+            result += arguments[i].getValue();
         }
 
-        @Override
-        public int getValue() {
-            if (arguments.length != 2)
-                throw new IllegalArgumentException();
-            return arguments[0].getValue() + arguments[1].getValue();
-        }
-
+        return result;
+    }
 }

@@ -13,11 +13,10 @@ public abstract class Operation implements Value {
 
     protected final Value[] arguments;
 
-    // Current operations
+    // Defining arguments
     public Operation(Value... operations) {
 
         this.arguments = operations;
-        System.out.println("val"+arguments[1]);
     }
 
     public final int evaluate (int... paramVal) {
@@ -29,18 +28,18 @@ public abstract class Operation implements Value {
 
             valuesQueue.add(i);
         }
-        System.out.println(valuesQueue);
+
         initialize(valuesQueue);
         return getValue();
     }
 
+    // Init operation with current x
     @Override
     public final void initialize(ArrayDeque<Integer> variableValues) {
 
         for (Value value : arguments) {
 
             value.initialize(variableValues);
-            System.out.println("val"+value);
         }
     }
 }
